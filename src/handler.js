@@ -3,7 +3,7 @@ const books = require('./books');
 
 const addBookHandler = (request, h) => {
     const {
-        name, year, author, summary, publisher, pageCount, readPage,
+        name, year, author, summary, publisher, pageCount, readPage
     } = request.payload;
 
     if (name === undefined) {
@@ -29,6 +29,7 @@ const addBookHandler = (request, h) => {
     const insertedAt = new Date().toISOString();
     const finished = (pageCount === readPage);
     const updatedAt = insertedAt;
+    const reading = false;
     const newBook = {
         id,
         name,
@@ -41,6 +42,7 @@ const addBookHandler = (request, h) => {
         finished,
         insertedAt,
         updatedAt,
+        reading
     };
 
     books.push(newBook);

@@ -16,11 +16,6 @@ const routes = [
         path: '/books/{id}',
         handler: getBookbyIdHandler,
     },
-    {
-        method: 'GET',
-        path: '/books/name',
-        handler: getBookbyNameHandler,
-    },
 
     {
         method: 'PUT',

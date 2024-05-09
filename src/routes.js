@@ -13,23 +13,23 @@ const routes = [
     },
     {
         method: 'GET',
-        path: '/books/id/{id}',
+        path: '/books/{id}',
         handler: getBookbyIdHandler,
     },
     {
         method: 'GET',
-        path: '/books/name/{name}',
+        path: '/books/name',
         handler: getBookbyNameHandler,
     },
 
     {
         method: 'PUT',
-        path: '/books/id/{id}',
+        path: '/books/{id}',
         handler: editBookbyIdHandler,
     },
     {
         method: 'DELETE',
-        path: '/books/id/{id}',
+        path: '/books/{id}',
         handler: deleteBookbyIdHandler,
     },
 
